@@ -1,4 +1,5 @@
 const appSidebarButtonTemplate = document.createElement('template');
+
 appSidebarButtonTemplate.innerHTML = `
 <style>
 *{
@@ -162,7 +163,7 @@ class AppSidebarButton extends HTMLElement {
         this.attachShadow({ mode: 'open' });
       };
       connectedCallback() {
-          console.log(1);
+          console.log(1);//I use console.log() so we can se if the code has bugs
           this.shadowRoot.append(appSidebarButtonTemplate.content.cloneNode(true));
       };
       disconnectedCallback(){
@@ -171,5 +172,5 @@ class AppSidebarButton extends HTMLElement {
 };
 
 window.customElements.define('app-sidebar-button', AppSidebarButton);
-console.log(3);
+console.log(3);//so we can se if the code has bugs
 
